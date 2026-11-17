@@ -10,7 +10,10 @@ const productSchema = new mongoose.Schema(
     sizes: [String],
     price: String,
     emoji: String,
+<<<<<<< HEAD
     available: { type: Boolean, default: true },
+=======
+>>>>>>> 38d7a37777b9d115dc3d5e863763fb47065e9b33
   },
   { timestamps: true }
 );

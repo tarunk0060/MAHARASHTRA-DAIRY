@@ -7,10 +7,13 @@ import { fileURLToPath } from "url";
 
 import productRoutes from "./routes/products.js";
 import contactRoutes from "./routes/contact.js";
+<<<<<<< HEAD
 import adminAuthRoutes from "./routes/adminAuth.js";
 import adminProductRoutes from "./routes/adminProducts.js";
 import adminContactRoutes from "./routes/adminContacts.js";
 import adminContentRoutes from "./routes/adminContent.js";
+=======
+>>>>>>> 38d7a37777b9d115dc3d5e863763fb47065e9b33
 
 dotenv.config();
 
@@ -29,12 +32,15 @@ app.get("/api/health", (req, res) =>
 app.use("/api/products", productRoutes);
 app.use("/api/contact", contactRoutes);
 
+<<<<<<< HEAD
 // Admin routes
 app.use("/api/admin/auth", adminAuthRoutes);
 app.use("/api/admin/products", adminProductRoutes);
 app.use("/api/admin/contacts", adminContactRoutes);
 app.use("/api/admin/content", adminContentRoutes);
 
+=======
+>>>>>>> 38d7a37777b9d115dc3d5e863763fb47065e9b33
 // Serve the built React app in production
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const clientDist = path.join(__dirname, "../client/dist");
