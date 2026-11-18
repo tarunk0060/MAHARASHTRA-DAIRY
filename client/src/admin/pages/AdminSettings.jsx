@@ -64,10 +64,10 @@ export default function AdminSettings() {
               tools for:
             </p>
             <ul>
-              <li>🥛 Product Management - Add, edit, and manage dairy products</li>
-              <li>💬 Contact Management - View and manage customer enquiries</li>
-              <li>📝 Content Management - Update website content sections</li>
-              <li>📊 Dashboard - View key statistics and recent activities</li>
+              <li>Product Management — add, edit, and manage dairy products</li>
+              <li>Contact Management — view and manage customer enquiries</li>
+              <li>Content Management — update website content sections</li>
+              <li>Dashboard — view key statistics and recent activity</li>
             </ul>
             <p>
               <strong>Security Note:</strong> Always keep your login credentials secure and log

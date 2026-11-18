@@ -105,7 +105,7 @@ export default function AdminEnquiries() {
                 <div className="enquiry-header">
                   <h3>{enquiry.name}</h3>
                   <span className={`badge ${enquiry.isResolved ? "resolved" : "pending"}`}>
-                    {enquiry.isResolved ? "✓ Resolved" : "⏳ Pending"}
+                    {enquiry.isResolved ? "Resolved" : "Pending"}
                   </span>
                 </div>
 

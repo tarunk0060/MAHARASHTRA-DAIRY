@@ -20,12 +20,6 @@ export default function AdminLogin() {
 
   return (
     <div className="admin-login">
-      <div className="login-background">
-        <div className="login-shapes shape-1"></div>
-        <div className="login-shapes shape-2"></div>
-        <div className="login-shapes shape-3"></div>
-      </div>
-
       <div className="login-container">
         <div className="login-box">
           <div className="login-header">
@@ -33,7 +27,7 @@ export default function AdminLogin() {
               {!logoError ? (
                 <img
                   src="/logo.png"
-                  alt="Maharashtra Dairy Logo"
+                  alt="Maharashtra Dairy"
                   className="logo-img"
                   onError={() => setLogoError(true)}
                 />
@@ -42,43 +36,33 @@ export default function AdminLogin() {
               )}
             </div>
             <h1>Maharashtra Dairy</h1>
-            <p>Admin Dashboard</p>
-            <p className="tagline">Pure • Fresh • Traditional</p>
+            <p>Sign in to the admin panel</p>
           </div>
 
           <form onSubmit={handleSubmit} className="login-form">
             {error && (
               <div className="alert error">
-                <span className="alert-icon">⚠️</span>
                 <span>{error}</span>
               </div>
             )}
 
             <div className="form-group">
-              <label htmlFor="email">
-                <span className="label-icon">📧</span>
-                Email Address
-              </label>
-              <div className="input-wrapper">
-                <input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@maharashtradairy.com"
-                  required
-                  disabled={loading}
-                  className="form-input"
-                />
-              </div>
+              <label htmlFor="email">Email address</label>
+              <input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+                required
+                disabled={loading}
+                className="form-input"
+              />
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">
-                <span className="label-icon">🔐</span>
-                Password
-              </label>
-              <div className="input-wrapper password-wrapper">
+              <label htmlFor="password">Password</label>
+              <div className="input-wrapper">
                 <input
                   id="password"
                   type={showPassword ? "text" : "password"}
@@ -95,26 +79,18 @@ export default function AdminLogin() {
                   onClick={() => setShowPassword(!showPassword)}
                   disabled={loading}
                 >
-                  {showPassword ? "👁️" : "👁️‍🗨️"}
+                  {showPassword ? "Hide" : "Show"}
                 </button>
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="btn btn-login"
-              disabled={loading}
-            >
-              <span>{loading ? "Logging in..." : "Login to Dashboard"}</span>
-              {loading ? "⏳" : "→"}
+            <button type="submit" className="btn-login" disabled={loading}>
+              {loading ? "Signing in…" : "Sign in"}
             </button>
           </form>
 
           <div className="login-footer">
-            <p className="security-note">
-              <span>🔒</span> Secure Admin Access Only
-            </p>
-            <p className="version-info">Admin Panel v1.0</p>
+            <p className="security-note">Authorised access only</p>
           </div>
         </div>
       </div>

@@ -46,7 +46,7 @@ export default function AdminProducts() {
         <div className="page-header">
           <h1>Products</h1>
           <Link to="/admin/products/add" className="btn btn-primary">
-            ➕ Add Product
+            Add Product
           </Link>
         </div>
 

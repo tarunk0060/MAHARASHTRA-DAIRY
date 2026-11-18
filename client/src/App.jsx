@@ -7,8 +7,6 @@ import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import Quality from "./pages/Quality.jsx";
 import Contact from "./pages/Contact.jsx";
-
-<<<<<<< HEAD
 import { AdminAuthProvider } from "./admin/context/AdminAuthContext.jsx";
 import ProtectedAdminRoute from "./admin/components/ProtectedAdminRoute.jsx";
 import AdminLogin from "./admin/pages/AdminLogin.jsx";
@@ -25,34 +23,21 @@ import "./admin/styles/admin.css";
 export default function App() {
   const { pathname } = useLocation();
   const isAdminRoute = pathname.startsWith("/admin");
-
-=======
-export default function App() {
-  const { pathname } = useLocation();
->>>>>>> 38d7a37777b9d115dc3d5e863763fb47065e9b33
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
-<<<<<<< HEAD
     <AdminAuthProvider>
       {!isAdminRoute && <Navbar />}
       <main>
         <Routes>
           {/* Public Routes */}
-=======
-    <>
-      <Navbar />
-      <main>
-        <Routes>
->>>>>>> 38d7a37777b9d115dc3d5e863763fb47065e9b33
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/quality" element={<Quality />} />
           <Route path="/contact" element={<Contact />} />
-<<<<<<< HEAD
 
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />
@@ -127,12 +112,5 @@ export default function App() {
       </main>
       {!isAdminRoute && <Footer />}
     </AdminAuthProvider>
-=======
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </main>
-      <Footer />
-    </>
->>>>>>> 38d7a37777b9d115dc3d5e863763fb47065e9b33
   );
 }

@@ -48,53 +48,21 @@ export default function AdminDashboard() {
         {error && <div className="alert error">{error}</div>}
 
         <div className="stats-grid">
-          <div className="stat-card">
-            <div className="stat-icon">🥛</div>
-            <div className="stat-content">
-              <h3>Total Products</h3>
-              <p className="stat-value">{stats?.totalProducts || 0}</p>
+          {[
+            { label: "Total products", value: stats?.totalProducts },
+            { label: "Available", value: stats?.availableProducts },
+            { label: "Unavailable", value: stats?.unavailableProducts },
+            { label: "Total enquiries", value: stats?.totalEnquiries },
+            { label: "New enquiries", value: stats?.newEnquiries },
+            { label: "Unresolved", value: stats?.unresolvedEnquiries },
+          ].map((stat) => (
+            <div className="stat-card" key={stat.label}>
+              <div className="stat-content">
+                <h3>{stat.label}</h3>
+                <p className="stat-value">{stat.value || 0}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-icon">✅</div>
-            <div className="stat-content">
-              <h3>Available</h3>
-              <p className="stat-value">{stats?.availableProducts || 0}</p>
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-icon">❌</div>
-            <div className="stat-content">
-              <h3>Unavailable</h3>
-              <p className="stat-value">{stats?.unavailableProducts || 0}</p>
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-icon">💬</div>
-            <div className="stat-content">
-              <h3>Total Enquiries</h3>
-              <p className="stat-value">{stats?.totalEnquiries || 0}</p>
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-icon">🆕</div>
-            <div className="stat-content">
-              <h3>New Enquiries</h3>
-              <p className="stat-value">{stats?.newEnquiries || 0}</p>
-            </div>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-icon">⏳</div>
-            <div className="stat-content">
-              <h3>Unresolved</h3>
-              <p className="stat-value">{stats?.unresolvedEnquiries || 0}</p>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="dashboard-section">
